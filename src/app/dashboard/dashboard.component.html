@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="container-fluid my-3">
+  <div class="row">
+    <div class="col-sm-2 ml-5">
+      <div class="list-group">
+        <a routerLink="/admin" class="list-group-item active">DashBoard</a>
+        <a routerLink="./addhome" class="list-group-item">Add Home Category</a><!-- ./addhome mease admin ke aage /addhome= admin/addhome-->
+        <!--event binding: koi bhi functionality bind karni ho tho-->
+        <a routerLink="./editform" class="list-group-item">Edit Home Category</a>
+        <a routerLink="./addimagesdata" class="list-group-item">Add Images</a>
+        <a routerLink="./imagedataadd" class="list-group-item">Images Insert</a>
+        <a routerLink="./fetchimages" class="list-group-item">Fetch Images</a>
+      </div>
+    </div>
+    <div class="col-sm-9 my-1">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

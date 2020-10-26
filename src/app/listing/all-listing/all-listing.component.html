@@ -1,0 +1,32 @@
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title text-center">Photogallery
+                </h2>
+            </div>
+        </div>
+        <div class="container-fluid">
+        <div class="row">
+    
+      
+    
+        
+        
+            <div class="col-sm-3" *ngFor="let listing of hh">
+          
+                <div class="col-sm-12"><img src="http://localhost:5000/{{listing.imagename}}" class="img-fluid border"></div>
+                       
+              <!--<p><img [src]="http://localhost:5000/'listing.imagename'" class="img-fluid" style="width:100%;" alt="hh"></p>
+              <img [src]="'../../../../../../public/images/'+'listing.imagename'" alt="not found" width="100px" height="150px">
+              <p>{{'../../../../../../public/images/'+listing.imagename}}</p>-->
+            </div>
+
+    
+    
+    
+        </div>
+    </div>
+    </div>
+
+

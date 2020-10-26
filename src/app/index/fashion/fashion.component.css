@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  img {
+    border:5px solid black;
+    z-index:1111111111111111111111111111111111111;
+    background:rgba(235, 24, 24, 0.5);
+  }
+  
+  .aa{
+    position: fixed;
+    right:20px;
+    bottom:100px;
+    z-index: 11111111111111111111111111111111111111111111111111111111111111111;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  h1{
+    position: absolute;
+    top:0px;
+  }
+  
+  .hh{
+    min-height: 1000px;
+  }

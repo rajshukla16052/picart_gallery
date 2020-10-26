@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center" >Updateform</h3>
+            <br>
+            <h3 class="text-center">{{data.ititle}}</h3><br>
+            <div class="cotainer">
+                <div class="row">
+                    <div class="col-6">
+                        <div *ngIf="data.image">
+                            <img src="http://localhost:8080/myimages/{{data.image}}" > <br>
+                        </div>
+                        <div *ngIf="data.image2">
+                            <img src="http://localhost:8080/myimages/{{data.image2}}"> <br>
+                        </div>
+                        <div *ngIf="data.image3">
+                            <img src="http://localhost:8080/myimages/{{data.image3}}"> <br>
+                        </div>
+                        <div *ngIf="data.image4">
+                            <img src="http://localhost:8080/myimages/{{data.image4}}"> <br>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <form [formGroup]="editimageform" (ngSubmit)="editimage()">
+                            <label>Title</label><br>
+                            <input type="text" placeholder="Enter Title" formControlName="ititle"  [(ngModel)]="data.ititle">
+                            <br>
+                            <label>category</label><br>
+                            <input type="text" placeholder="Category Name" formControlName="catgry" [(ngModel)]="data.catgry">
+                            <br>
+                            <label>Select File</label><br>
+                            <input type="file" placeholder="Choose Image" formControlName="image" *ngIf="data.image" [(ngModel)]="data.image" (change)=addImage($event)> <!--$event use here for pass data through parameter-->
+                            <input type="file" placeholder="Choose Image" formControlName="image" *ngIf="data.image2" [(ngModel)]="data.image" (change)=addImage($event)>
+                            <input type="file" placeholder="Choose Image" formControlName="image" *ngIf="data.image3" [(ngModel)]="data.image" (change)=addImage($event)>
+                            <input type="file" placeholder="Choose Image" formControlName="image" *ngIf="data.image4" [(ngModel)]="data.image" (change)=addImage($event)>
+                            <br>
+                            <br>
+                            <input type="submit" class="btn btn-success" [disabled]="!editimageform.valid"  value="Edit Image">
+                        </form><!--[disabled]="!catForm.valid"-->
+                    </div>
+
+                </div>
+            </div>          
+
+        </div>
+    </div>
+</div>

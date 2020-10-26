@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    border:px solid black;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #5e5e5e;
+}
+
+a:hover{
+    color:black;
+}
+
+
+.mh{
+    position: relative;
+    top: 1000px auto;
+    z-index: 1;
+}

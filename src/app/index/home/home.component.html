@@ -1,0 +1,132 @@
+<head>
+  <meta
+    name="description"
+    content="This is an example of a meta description. 
+        This will often show up in search results."
+  />
+</head>
+
+<!-- <div class="text-center">
+        <circle-progress *ngIf="loader"
+        [percent]="100"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [animation]="true"
+        [animationDuration]="10000"     
+        >
+        </circle-progress>
+    </div> -->
+
+<h1 #h1></h1>
+<div class="container-fluid mt-5 hh">
+  <div class="row container-fluid animate__animated animate__fadeIn">
+    <!-- *ngIf="!loader"-->
+
+    <div class="col-sm-3">
+      <!--Gallary-->
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-sm-12"
+            *ngFor="let data of fdata; let dataa; of: fdata; let i = index"
+          >
+            <div class="row" *ngIf="data.image">
+              <a  name="img" 
+                ><img
+                  src="http://localhost:8080/myimages/{{ data.image }}"
+                  class="img-fluid"
+                  alt="home image"
+              /></a>
+              <!-- .zz-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="col-sm-3">
+      <!--Gallary-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12" *ngFor="let data of fdata; let i = index">
+            <div class="row" *ngIf="data.image2">
+              <a  
+                ><img
+                  src="http://localhost:8080/myimages/{{ data.image2 }}"
+                  class="img-fluid"
+                  alt="home image"
+              /></a>
+              <!-- .zzz-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <!--Gallary-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12" *ngFor="let data of fdata">
+            <div class="row" *ngIf="data.image3">
+              <a  >
+                <img
+                  src="http://localhost:8080/myimages/{{ data.image3 }}"
+                  class="img-fluid"
+                  alt="home image"
+              /></a>
+              <!-- .zzzz-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <!--Gallary-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12" *ngFor="let data of fdata">
+            <div class="row" *ngIf="data.image4">
+                <a  >
+                <img
+                src="http://localhost:8080/myimages/{{ data.image4 }}"
+                class="img-fluid"
+                alt="home image"
+              /></a>
+              <!-- .zzzzz (click)="zzzzz()"-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="aa" (click)="onClick()"
+  ><i class="fas fa-arrow-circle-up fa-3x"></i
+></a>
+
+<!-- <div id="imgModal" class="slide-modal">
+
+    <div class="slide-modal-content">
+        <span class="close cursor" (click)="closeModal()">&times;</span>
+        <div class="img-slides text-center" *ngFor="let data of fdata; let i = index">
+            <img src="http://localhost:8080/myimages/{{data.image2}}" id="z" class="vv grabbable">
+        </div>
+    </div>
+            <a class="prev" (click)="plusSlides(-4)">&#10094;</a>
+            <a class="next" (click)="plusSlides(4)">&#10095;</a>
+</div> -->
+
+<!--https://www.img2go.com/compress-image
+https://www.reduceimages.com/-->
+<!-- ctrl + k then u -->
+
+<!-- 24-09-2020 -->
+<!-- https://github.com/aFarkas/lazysizes#specify-dimensions -->
+
+

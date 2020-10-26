@@ -1,0 +1,108 @@
+<h2>Added Photos In Home Page</h2>
+<div class="container-fluid">
+    <div class="row">
+
+
+
+            <div class="col-sm-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <form [formGroup]="catForm" (ngSubmit)="addCat()">
+                                        <label>Title</label>
+                                        <input type="text" formControlName="title" class="form-control">
+                                        <br>
+                                        <label>Category</label>
+                                        <input type="text" formControlName="category" class="form-control">
+                                        <br>
+                                        <label>Upload Image</label>
+                                        <input type="file" formControlName="image" class="form-control" (change)=addImage($event)>
+                                        <br>
+                                        <input type="submit" name="sub" class="btn btn-success" value="Insert Category" [disabled]="!catForm.valid">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <!-- new code -->
+                                    <form [formGroup]="catForm" (ngSubmit)="addCat2()">
+                                        <label>Title2</label>
+                                        <input type="text" formControlName="title" class="form-control">
+                                        <br>
+                                        <label>Category</label>
+                                        <input type="text" formControlName="category" class="form-control">
+                                        <br>
+                                        <label>Upload Image</label>
+                                        <input type="file" class="form-control" (change)=addImage($event)>
+                                        <br>
+                                        <input type="submit" name="sub" class="btn btn-success" value="Insert Category">
+                                    </form><!--[disabled]="!catForm.valid"-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <form [formGroup]="catForm" (ngSubmit)="addCat3()">
+                                        <label>Title3</label>
+                                        <input type="text" formControlName="title" class="form-control">
+                                        <br>
+                                        <label>Category</label>
+                                        <input type="text" formControlName="category" class="form-control">
+                                        <br>
+                                        <label>Upload Image</label>
+                                        <input type="file" class="form-control" (change)=addImage($event)>
+                                        <br>
+                                        <input type="submit" name="sub" class="btn btn-success" value="Insert Category">
+                                    </form><!--[disabled]="!catForm.valid"-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <form [formGroup]="catForm" (ngSubmit)="addCat4()">
+                                        <label>Title4</label>
+                                        <input type="text" formControlName="title" class="form-control">
+                                        <br>
+                                        <label>Category</label>
+                                        <input type="text" formControlName="category" class="form-control">
+                                        <br>
+                                        <label>Upload Image</label>
+                                        <input type="file" class="form-control" (change)=addImage($event)>
+                                        <br>
+                                        <input type="submit" name="sub" class="btn btn-success" value="Insert Category">
+                                    </form><!--[disabled]="!catForm.valid"-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+    </div>
+</div>
+
+
+<!--Reactive form: formControlName/ [fromGroup]="catForm" (ngSubmit)="catForm()"   <input type="submit">-->
+<!--Templeting driven from: name="cdata.cname" / [(ngModel)]="cdata.cname" for set and get for update-->

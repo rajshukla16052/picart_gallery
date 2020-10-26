@@ -1,0 +1,23 @@
+<h2>Here You Can Edit & Delete Your Data!</h2>
+<div class ="container">
+    <table class="table table-borderd">
+        <tr>
+            <th>S No.</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tr *ngFor="let data of fdata; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{data.ititle}}</td>
+            <td>{{data.catgry}}</td>
+            <td *ngIf="data.image"><img src="http://localhost:8080/myimages/{{data.image}}" height="90px" width="90px"></td>
+            <td *ngIf="data.image2"><img src="http://localhost:8080/myimages/{{data.image2}}" height="90px" width="90px"></td>
+            <td *ngIf="data.image3"><img src="http://localhost:8080/myimages/{{data.image3}}" height="90px" width="90px"></td>
+            <td *ngIf="data.image4"><img src="http://localhost:8080/myimages/{{data.image4}}" height="90px" width="90px"></td>
+            <td><button class="btn btn-primary" (click)="this.imgservice.setter(data)">Edit</button></td> 
+            <td><button class="btn btn-danger">Delete</button></td>
+        </tr>
+    </table>
+</div>
